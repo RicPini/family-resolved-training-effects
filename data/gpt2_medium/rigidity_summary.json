@@ -1,0 +1,86 @@
+{
+  "n_layers": 13,
+  "n_ridges": 8,
+  "verdict": "B",
+  "null_rate": 0.0,
+  "peaks": [
+    {
+      "name": "transformer.wpe.weight",
+      "family": "embed",
+      "k_peak": 5.398311839090546,
+      "C_peak": 15.708596216744699
+    },
+    {
+      "name": "transformer.h.0.attn.c_attn.weight",
+      "family": "attn_qk",
+      "k_peak": 0.019994910090788316,
+      "C_peak": 7.84872559011509
+    },
+    {
+      "name": "transformer.h.0.attn.c_proj.weight",
+      "family": "attn_out",
+      "k_peak": 0.4957297351337022,
+      "C_peak": 2.501533795703583
+    },
+    {
+      "name": "transformer.h.0.mlp.c_fc.weight",
+      "family": "mlp",
+      "k_peak": 0.0969545067357269,
+      "C_peak": 5.54455104950469
+    },
+    {
+      "name": "transformer.h.0.mlp.c_proj.weight",
+      "family": "mlp",
+      "k_peak": 0.11305732029354847,
+      "C_peak": 9.540203937875336
+    },
+    {
+      "name": "transformer.h.1.attn.c_attn.weight",
+      "family": "attn_qk",
+      "k_peak": 0.1033522390587471,
+      "C_peak": 6.698524063096973
+    },
+    {
+      "name": "transformer.h.1.attn.c_proj.weight",
+      "family": "attn_out",
+      "k_peak": 0.5180370976121353,
+      "C_peak": 2.366386374565442
+    },
+    {
+      "name": "transformer.h.1.mlp.c_fc.weight",
+      "family": "mlp",
+      "k_peak": 0.14214863903698027,
+      "C_peak": 12.964611926001002
+    },
+    {
+      "name": "transformer.h.1.mlp.c_proj.weight",
+      "family": "mlp",
+      "k_peak": 0.12448396743345268,
+      "C_peak": 6.082015766207191
+    },
+    {
+      "name": "transformer.h.2.attn.c_attn.weight",
+      "family": "attn_qk",
+      "k_peak": 0.07108895708836661,
+      "C_peak": 10.87222911981408
+    },
+    {
+      "name": "transformer.h.2.attn.c_proj.weight",
+      "family": "attn_out",
+      "k_peak": 0.3001187862310937,
+      "C_peak": 7.878523186541508
+    },
+    {
+      "name": "transformer.h.2.mlp.c_fc.weight",
+      "family": "mlp",
+      "k_peak": 0.12220933223866634,
+      "C_peak": 8.015670895950342
+    },
+    {
+      "name": "transformer.h.2.mlp.c_proj.weight",
+      "family": "mlp",
+      "k_peak": 0.04345046094650727,
+      "C_peak": 6.436840887327666
+    }
+  ]
+}

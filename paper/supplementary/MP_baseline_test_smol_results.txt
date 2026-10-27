@@ -1,0 +1,16 @@
+python3 MP_baseline_test_smol.py
+  trial 5/20: k_peak=1.2298 C_peak=2.639
+  trial 10/20: k_peak=0.8097 C_peak=1.000
+  trial 15/20: k_peak=1.2428 C_peak=2.542
+  trial 20/20: k_peak=2.0474 C_peak=2.455
+
+N valid trials: 20
+k_peak:  mean=1.2886  std=0.2803
+log_k:   mean=0.2318  std=0.2066
+C_peak:  mean=2.455  std=1.441
+
+compare to untrained c_attn log_k_std: ~0.026
+compare to trained c_attn log_k_std:   ~0.703
+
+Three-matrix group log_k_std: mean=0.0848  std=0.0793
+

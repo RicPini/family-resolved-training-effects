@@ -1,0 +1,24 @@
+python3 compare_multiseed_smol.py
+Trained: 16 matrices with valid field
+
+TRAINED family log_k_std:
+  attn_out   0.6352
+  attn_qk    0.7314
+  mlp        0.2195
+
+seed         mlp   attn_qk  attn_out     embed
+--------------------------------------------------
+42        0.0342    0.0692    0.0091       nan
+1234      0.0870    0.0644    0.0186       nan
+3456      0.0556    0.0752    0.2137       nan
+5678      0.0023    0.0700    0.5781       nan
+7890      0.0033    0.0716    0.0078       nan
+9012      0.0567    0.1485    0.4075       nan
+
+trained    0.2195    0.7314    0.6352       nan
+
+AGGREGATE (untrained seeds)
+  mlp        mean=0.0398 std=0.0304 n=6
+  attn_qk    mean=0.0831 std=0.0294 n=6
+  attn_out   mean=0.2058 std=0.2207 n=6
+(fgrf) ri@SilicaMkXII:~/Desktop/Hat tile Frac

@@ -1,0 +1,103 @@
+(fgrf) ri@SilicaMkXII:~/Desktop/New Folder$ python3 fgrf_multi_model_v3A.py --model openai-community/gpt2-medium --ablation full --layers 20 --seed 42
+2026-10-16 17:24:37 - INFO - 
+================================================================================
+2026-10-16 17:24:37 - INFO - FGRF MULTI-MODEL
+2026-10-16 17:24:37 - INFO - ================================================================================
+2026-10-16 17:24:37 - INFO - Model: openai-community/gpt2-medium
+2026-10-16 17:24:37 - INFO - Ablation: full
+2026-10-16 17:24:37 - INFO - Layers: 20
+2026-10-16 17:24:37 - INFO - Seed: 42
+2026-10-16 17:24:37 - INFO - Device: auto
+2026-10-16 17:24:37 - INFO - Fast mode: False
+2026-10-16 17:24:37 - INFO - 
+[Loading model...]
+2026-10-16 17:24:37 - INFO - HTTP Request: HEAD https://huggingface.co/openai-community/gpt2-medium/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 17:24:37 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/openai-community/gpt2-medium/6dcaa7a952f72f9298047fd5137cd6e4f05f41da/config.json "HTTP/1.1 200 OK"
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 292/292 [00:00<00:00, 903.57it/s]
+2026-10-16 17:24:38 - INFO - HTTP Request: HEAD https://huggingface.co/openai-community/gpt2-medium/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 17:24:38 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/openai-community/gpt2-medium/6dcaa7a952f72f9298047fd5137cd6e4f05f41da/generation_config.json "HTTP/1.1 200 OK"
+2026-10-16 17:24:38 - INFO - HTTP Request: HEAD https://huggingface.co/openai-community/gpt2-medium/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-16 17:24:38 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-16 17:24:38 - INFO - HTTP Request: HEAD https://huggingface.co/openai-community/gpt2-medium/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 17:24:38 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/openai-community/gpt2-medium/6dcaa7a952f72f9298047fd5137cd6e4f05f41da/config.json "HTTP/1.1 200 OK"
+2026-10-16 17:24:38 - INFO - HTTP Request: HEAD https://huggingface.co/openai-community/gpt2-medium/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 17:24:38 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/openai-community/gpt2-medium/6dcaa7a952f72f9298047fd5137cd6e4f05f41da/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-10-16 17:24:38 - INFO - HTTP Request: GET https://huggingface.co/api/models/openai-community/gpt2-medium/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-16 17:24:39 - INFO - HTTP Request: GET https://huggingface.co/api/models/openai-community/gpt2-medium/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-16 17:24:39 - INFO - 
+Training texts: 10
+2026-10-16 17:24:39 - INFO - Evaluation texts: 20
+2026-10-16 17:24:39 - INFO - ================================================================================
+2026-10-16 17:24:39 - INFO - FGRF MULTI-MODEL ENGINE
+2026-10-16 17:24:39 - INFO - ================================================================================
+2026-10-16 17:24:39 - INFO - Training texts: 10
+2026-10-16 17:24:39 - INFO - Evaluation texts: 20
+2026-10-16 17:24:39 - INFO - Ablation mode: full
+2026-10-16 17:24:39 - INFO - Seed: 42
+2026-10-16 17:24:39 - INFO - Device: cpu
+2026-10-16 17:24:39 - INFO - 
+[1] Baseline evaluation...
+[transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+2026-10-16 17:25:18 - INFO -     Baseline perplexity: 53.0236 ± 59.5807
+2026-10-16 17:25:18 - INFO - 
+[2] Generating baseline samples...
+2026-10-16 17:25:55 - INFO -     Prompt 1: The future of artificial intelligence will be defined by a number at least as important to our busin...
+2026-10-16 17:26:34 - INFO -     Prompt 2: In the year 2050, humanity has reached a level of GDP equivalent to about $1.3 trillion and by 2080 ...
+2026-10-16 17:27:09 - INFO -     Prompt 3: The most important scientific discovery of the century is probably that we have a single, singular m...
+2026-10-16 17:27:09 - INFO - 
+[3] Created 3 mini-batches of size 4
+2026-10-16 17:27:09 - INFO - 
+[4] Processing 20 layers...
+2026-10-16 17:27:14 - INFO -     Effective k-range: [1.601e-02, 1.601e+04] (matrix-derived, 13 matrices)
+2026-10-16 17:27:31 - INFO -     Fractal Flow: Q_IR=0.9900, Q_UV=0.1396
+2026-10-16 17:27:31 - INFO -     Interdependence (flow): informational only
+2026-10-16 17:27:31 - INFO -     Layer 1/20: transformer.wpe.weight...
+2026-10-16 17:29:12 - WARNING - THERMO REJECT: transformer.h.0.ln_1.weight  H=8.989828e-03  required_H=1.084735e+01  dS=2.961416e-01  h_scale=8.848e+01
+2026-10-16 17:30:03 - WARNING - THERMO REJECT: transformer.h.0.attn.c_attn.weight  H=5.596533e-03  required_H=2.414497e-01  dS=6.591775e-03  h_scale=8.848e+01
+2026-10-16 17:31:51 - WARNING - THERMO REJECT: transformer.h.0.ln_2.weight  H=1.146209e-03  required_H=6.680540e+00  dS=1.873891e-01  h_scale=8.611e+01
+2026-10-16 17:32:57 - WARNING - THERMO REJECT: transformer.h.0.mlp.c_fc.weight  H=8.341224e-03  required_H=2.014070e+00  dS=5.649466e-02  h_scale=8.611e+01
+2026-10-16 17:34:43 - WARNING - THERMO REJECT: transformer.h.1.ln_1.weight  H=4.727069e-04  required_H=2.882371e-01  dS=8.399029e-03  h_scale=8.289e+01
+2026-10-16 17:35:22 - WARNING - THERMO REJECT: transformer.h.1.attn.c_attn.weight  H=3.027059e-03  required_H=1.353344e+00  dS=3.943551e-02  h_scale=8.289e+01
+2026-10-16 17:35:56 - INFO -     Layer 11/20: transformer.h.1.ln_2.weight...
+2026-10-16 17:38:47 - WARNING - THERMO REJECT: transformer.h.2.attn.c_attn.weight  H=6.629756e-03  required_H=4.651935e+00  dS=1.310495e-01  h_scale=8.574e+01
+2026-10-16 17:40:31 - WARNING - THERMO REJECT: transformer.h.2.mlp.c_fc.weight  H=1.758403e-03  required_H=6.371108e-01  dS=1.768627e-02  h_scale=8.701e+01
+2026-10-16 17:41:34 - WARNING - THERMO REJECT: transformer.h.3.ln_1.weight  H=5.411765e-04  required_H=5.325272e-01  dS=1.488187e-02  h_scale=8.643e+01
+2026-10-16 17:41:34 - INFO - 
+[5] Final evaluation...
+2026-10-16 17:42:11 - INFO -     Final perplexity: 53.0207 ± 59.5768
+2026-10-16 17:42:11 - INFO -     Improvement: -0.0%
+2026-10-16 17:42:11 - INFO - 
+[6] Generating final samples...
+2026-10-16 17:42:39 - INFO -     Prompt 1: The future of artificial intelligence will depend on its ability to learn from experience, build str...
+2026-10-16 17:43:15 - INFO -     Prompt 2: In the year 2050, humanity has reached a point of no return. But it's still too early to call for di...
+2026-10-16 17:43:51 - INFO -     Prompt 3: The most important scientific discovery of the century is that we can create new and better models f...
+2026-10-16 17:43:51 - INFO - 
+[7] Duality Analysis:
+2026-10-16 17:43:51 - INFO -     Mean duality factor: 1.026
+2026-10-16 17:43:51 - INFO -     Mean D before: 1.774
+2026-10-16 17:43:51 - INFO -     D range: [0.061, 4.000]
+2026-10-16 17:43:51 - INFO - 
+[8] Statistics:
+2026-10-16 17:43:51 - INFO -     Layers processed: 11
+2026-10-16 17:43:51 - INFO -     Layers skipped: 9
+2026-10-16 17:43:51 - INFO -     Total plastic hysteresis: 0.016998
+2026-10-16 17:43:51 - INFO -     Thermodynamic rejections: 9
+2026-10-16 17:43:51 - INFO -     Thermodynamic accepts: 11
+2026-10-16 17:43:51 - INFO -     Total updates applied: 11
+2026-10-16 17:43:51 - INFO -     Elapsed time: 1152.3s
+2026-10-16 17:43:51 - INFO -     Mean entropy change: 0.1402
+2026-10-16 17:43:51 - INFO -     Mean relative change: 0.000001
+2026-10-16 17:43:51 - INFO -     Std relative change: 0.000001
+2026-10-16 17:43:51 - INFO - 
+[9] Results saved to: ./fgrf_results/multi_results_20261016_174351.json
+Writing model shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.44s/it]
+2026-10-16 17:43:52 - INFO -     Model saved to: ./fgrf_results/model_20261016_174351
+2026-10-16 17:43:52 - INFO - 
+================================================================================
+2026-10-16 17:43:52 - INFO - ✓ FGRF MULTI-MODEL DEPLOYMENT COMPLETE
+2026-10-16 17:43:52 - INFO - ================================================================================
+2026-10-16 17:43:52 - INFO - 
+Final improvement: -0.0%
+

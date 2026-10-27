@@ -1,0 +1,16 @@
+python3 MP_baseline_test_qwen.py
+  trial 5/20: k_peak=1.2832 C_peak=4.650
+  trial 10/20: k_peak=1.1829 C_peak=2.266
+  trial 15/20: k_peak=1.2197 C_peak=2.268
+  trial 20/20: k_peak=3.0335 C_peak=1.173
+
+N valid trials: 20
+k_peak:  mean=1.3687  std=0.4330
+log_k:   mean=0.2777  std=0.2522
+C_peak:  mean=2.177  std=1.035
+
+compare to untrained c_attn log_k_std: ~0.026
+compare to trained c_attn log_k_std:   ~0.703
+
+Three-matrix group log_k_std: mean=0.1206  std=0.0785
+

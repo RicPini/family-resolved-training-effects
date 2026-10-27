@@ -1,0 +1,64 @@
+python3 analyze_rigidity.py fgrf_results_qwen_trained_no_thermo/multi_results_*.json
+Loading fgrf_results_qwen_trained_no_thermo/multi_results_20261020_183927.json...
+  16 layers with valid (non-flat) fields
+
+PEAK LOCATIONS PER LAYER
+name                                         family      k_peak    C_peak
+model.layers.0.self_attn.q_proj.weight       attn_qk      0.5114     3.979
+model.layers.0.self_attn.k_proj.weight       attn_qk      0.3803     3.917
+model.layers.0.self_attn.v_proj.weight       attn_qk      1.8548     7.581
+model.layers.0.self_attn.o_proj.weight       attn_out      0.5858     7.818
+model.layers.0.mlp.gate_proj.weight          mlp         0.1878     8.001
+model.layers.0.mlp.up_proj.weight            mlp         0.6553    18.389
+model.layers.0.mlp.down_proj.weight          mlp         0.4880    13.340
+model.layers.1.self_attn.q_proj.weight       attn_qk      0.2488     6.451
+model.layers.1.self_attn.k_proj.weight       attn_qk      0.6635    24.641
+model.layers.1.self_attn.v_proj.weight       attn_qk      2.2722    23.884
+model.layers.1.self_attn.o_proj.weight       attn_out      0.8384    23.633
+model.layers.1.mlp.gate_proj.weight          mlp         0.3073    15.381
+model.layers.1.mlp.up_proj.weight            mlp         0.5785    30.630
+model.layers.1.mlp.down_proj.weight          mlp         0.5238    20.155
+model.layers.2.self_attn.q_proj.weight       attn_qk      0.5953     7.545
+model.layers.2.self_attn.k_proj.weight       attn_qk      0.5647    24.426
+
+PEAK CLUSTERING BY FAMILY
+  attn_qk: n= 8  k_range=[0.2488, 2.2722]  log_k_std=0.702
+      model.layers.1.self_attn.q_proj.weight         k_peak=0.2488  C_peak=6.451
+      model.layers.0.self_attn.k_proj.weight         k_peak=0.3803  C_peak=3.917
+      model.layers.0.self_attn.q_proj.weight         k_peak=0.5114  C_peak=3.979
+      model.layers.2.self_attn.k_proj.weight         k_peak=0.5647  C_peak=24.426
+      model.layers.2.self_attn.q_proj.weight         k_peak=0.5953  C_peak=7.545
+      model.layers.1.self_attn.k_proj.weight         k_peak=0.6635  C_peak=24.641
+      model.layers.0.self_attn.v_proj.weight         k_peak=1.8548  C_peak=7.581
+      model.layers.1.self_attn.v_proj.weight         k_peak=2.2722  C_peak=23.884
+  attn_out: n= 2  k_range=[0.5858, 0.8384]  log_k_std=0.179
+      model.layers.0.self_attn.o_proj.weight         k_peak=0.5858  C_peak=7.818
+      model.layers.1.self_attn.o_proj.weight         k_peak=0.8384  C_peak=23.633
+  mlp: n= 6  k_range=[0.1878, 0.6553]  log_k_std=0.431
+      model.layers.0.mlp.gate_proj.weight            k_peak=0.1878  C_peak=8.001
+      model.layers.1.mlp.gate_proj.weight            k_peak=0.3073  C_peak=15.381
+      model.layers.0.mlp.down_proj.weight            k_peak=0.4880  C_peak=13.340
+      model.layers.1.mlp.down_proj.weight            k_peak=0.5238  C_peak=20.155
+      model.layers.1.mlp.up_proj.weight              k_peak=0.5785  C_peak=30.630
+      model.layers.0.mlp.up_proj.weight              k_peak=0.6553  C_peak=18.389
+
+============================================================
+RIGIDITY FIELD ANALYSIS
+============================================================
+Total layers analyzed: 16
+Layers with valid delta: 16
+Ridges detected (delta > 0.25): 12
+  attn_qk: 7 ridges
+  mlp: 5 ridges
+Rational ridges:  0
+Algebraic ridges: 0
+Generic ridges:   12
+
+VERDICT: Case B (graded stratification).
+
+NULL TEST (random floats in the peak k-range)
+  samples: 200
+  classified algebraic: 0 (0.0%)
+  OK: null pass rate is low. Algebraicity test is discriminating.
+
+Summary written to rigidity_summary.json

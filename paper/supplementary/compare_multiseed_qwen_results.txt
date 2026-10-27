@@ -1,0 +1,24 @@
+python3 compare_multiseed_qwen.py
+Trained: 16 matrices with valid field
+
+TRAINED family log_k_std:
+  attn_out   0.1793
+  attn_qk    0.7022
+  mlp        0.4314
+
+seed         mlp   attn_qk  attn_out     embed
+--------------------------------------------------
+42        0.0352    0.0350    0.0013       nan
+1234      0.1006    0.1791    0.2162       nan
+3456      0.0877    0.1355    0.3979       nan
+5678      0.0222    0.3150    0.0094       nan
+7890      0.0655    0.2535    0.0412       nan
+9012      0.0228    0.0432    0.0309       nan
+
+trained    0.4314    0.7022    0.1793       nan
+
+AGGREGATE (untrained seeds)
+  mlp        mean=0.0557 std=0.0310 n=6
+  attn_qk    mean=0.1602 std=0.1025 n=6
+  attn_out   mean=0.1162 std=0.1454 n=6
+

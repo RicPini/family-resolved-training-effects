@@ -1,0 +1,14 @@
+  trial 5/20: k_peak=0.5261 C_peak=19.523
+  trial 10/20: k_peak=0.5532 C_peak=36.612
+  trial 15/20: k_peak=0.5302 C_peak=17.234
+  trial 20/20: k_peak=0.5269 C_peak=47.784
+
+N valid trials: 20
+k_peak:  mean=0.5424  std=0.0335
+log_k:   mean=-0.6134  std=0.0578
+C_peak:  mean=26.515  std=11.100
+
+compare to untrained c_attn log_k_std: ~0.026
+compare to trained c_attn log_k_std:   ~0.703
+
+Three-matrix group log_k_std: mean=0.0265  std=0.0344
